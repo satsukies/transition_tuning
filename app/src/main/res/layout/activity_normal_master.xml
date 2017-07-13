@@ -2,8 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  tools:context="net.ddns.satsukies.transition_tuning.MenuActivity"
+  tools:context="net.ddns.satsukies.transition_tuning.normal.NormalMasterActivity"
   >
+
   <data>
 
   </data>
@@ -13,13 +14,13 @@
     android:layout_height="match_parent"
     >
 
-    <Button
-      android:id="@+id/button_normal"
+    <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:text="No Customize"
+      android:layout_centerInParent="true"
+      android:text="okok"
       />
 
   </RelativeLayout>
+
 </layout>
