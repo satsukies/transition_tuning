@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @satsukies
- Sign out
- Watch 2,120
-  Star 52,237
- Fork 22,514 github/gitignore
- Code  Pull requests 154  Projects 0 Insights 
-Branch: master Find file Copy pathgitignore/Android.gitignore
-82eeac2  on 17 Feb
- Aleixo Sánchez Ignore dictionaries to reflect docs
-32 contributors @arcresu @tral @friederbluemle @callingshotgun @AdrianVovk @Zarkopafilis @whoshuu @evorion @szpssky @SamWhited @exarus @mquigley @kevinmost @vitorprado @jshou @HIPERCUBE @jschmid @PR3x @izuzak @FionaHagen @linterpreteur @erikghonyan @baudm @mrtazz @shiftkey @gbaron and others
-RawBlameHistory     
-56 lines (41 sloc)  760 Bytes
 # Built application files
 *.apk
 *.ap_
@@ -58,6 +39,7 @@ captures/
 .idea/gradle.xml
 .idea/dictionaries
 .idea/libraries
+.idea
 
 # Keystore files
 *.jks
@@ -72,5 +54,3 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
