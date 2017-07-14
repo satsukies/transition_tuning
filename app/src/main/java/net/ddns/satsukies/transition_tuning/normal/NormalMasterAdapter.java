@@ -1,8 +1,6 @@
 package net.ddns.satsukies.transition_tuning.normal;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +23,7 @@ public class NormalMasterAdapter extends ArrayAdapter<String> {
   private AppCompatActivity activity;
   private LinearLayoutManager manager;
 
-  private RecyclerAdapter adapter;
+  private NormalRecyclerAdapter adapter;
 
   private static final int LAYOUT_LIST = R.layout.layout_horizontal_list;
 
@@ -58,7 +56,7 @@ public class NormalMasterAdapter extends ArrayAdapter<String> {
     manager = new LinearLayoutManager(activity);
     manager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-    adapter = new RecyclerAdapter(activity, position, masterStore.getDataList(),
+    adapter = new NormalRecyclerAdapter(activity, position, masterStore.getDataList(),
         v -> onClickListener.onClickItem(v));
 
     binding.contentList.setAdapter(adapter);

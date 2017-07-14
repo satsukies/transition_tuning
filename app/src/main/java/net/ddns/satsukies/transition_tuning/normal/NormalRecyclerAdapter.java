@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
 import java.util.List;
 import net.ddns.satsukies.transition_tuning.R;
 import net.ddns.satsukies.transition_tuning.databinding.LayoutListItemBinding;
@@ -19,7 +17,7 @@ import net.ddns.satsukies.transition_tuning.databinding.LayoutListItemBinding;
  * Created by satsukies on 2017/07/14.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+public class NormalRecyclerAdapter extends RecyclerView.Adapter<NormalRecyclerAdapter.MyViewHolder> {
 
   private AppCompatActivity context;
   private List<String> list;
@@ -57,7 +55,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
   }
 
-  public RecyclerAdapter(AppCompatActivity context, int position, List<String> list,
+  public NormalRecyclerAdapter(AppCompatActivity context, int position, List<String> list,
       MyViewHolder.Listener listener) {
     this.context = context;
     parentPosition = position;
