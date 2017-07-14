@@ -22,6 +22,8 @@
     </activity>
     <activity android:name=".normal.NormalMasterActivity" />
     <activity android:name=".normal.NormalDetailActivity" />
+    <activity android:name=".shared.SharedMasterActivity" />
+    <activity android:name=".shared.SharedDetailActivity" />
   </application>
 
 </manifest>
