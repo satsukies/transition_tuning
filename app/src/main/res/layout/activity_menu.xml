@@ -25,7 +25,18 @@
       android:id="@+id/button_shared"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_below="@id/button_normal"
+      android:layout_centerHorizontal="true"
       android:text="Shared"
+      />
+
+    <Button
+      android:id="@+id/button_advanced"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/button_shared"
+      android:layout_centerHorizontal="true"
+      android:text="Advanced"
       />
 
   </RelativeLayout>
