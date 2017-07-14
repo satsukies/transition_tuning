@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import java.util.List;
 import net.ddns.satsukies.transition_tuning.R;
+import net.ddns.satsukies.transition_tuning.Values;
 import net.ddns.satsukies.transition_tuning.databinding.LayoutListItemBinding;
 
 /**
@@ -79,12 +80,8 @@ public class NormalRecyclerAdapter extends RecyclerView.Adapter<NormalRecyclerAd
 
     ImageView imageView = holder.getBinding().contentImage;
     Glide.with(imageView.getContext())
-        .load("http://imgur.com/ZJNbigT.png")
+        .load(Values.URL_IMAGE_LOW)
         .into(imageView);
-
-    //veryhigh;http://imgur.com/a/HGM2k direct;http://imgur.com/K1oWDXu.png
-    //mid;http://imgur.com/a/XrGjF direct;http://imgur.com/QUKsCnM
-    //low;http://imgur.com/a/NG6i4 direct;http://imgur.com/ZJNbigT
   }
 
   @Override public int getItemCount() {
