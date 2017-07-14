@@ -81,15 +81,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     ImageView imageView = holder.getBinding().contentImage;
     Glide.with(imageView.getContext())
-        .load("http://imgur.com/K1oWDXu.png")
-        .apply(new RequestOptions()
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE))
-        .thumbnail(Glide.with(imageView.getContext())
-            .load("http://imgur.com/ZJNbigT.png")
-            .apply(new RequestOptions()
-                .skipMemoryCache(true)
-                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)))
+        .load("http://imgur.com/ZJNbigT.png")
         .into(imageView);
 
     //veryhigh;http://imgur.com/a/HGM2k direct;http://imgur.com/K1oWDXu.png

@@ -40,8 +40,10 @@ public class NormalMasterActivity extends AppCompatActivity {
     binding = DataBindingUtil.setContentView(this, R.layout.activity_normal_master);
     masterStore = new NormalMasterStore(Dispatcher.getInstance());
 
-    adapter = new NormalMasterAdapter(this, masterStore,
-        v -> Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show());
+    adapter = new NormalMasterAdapter(this, masterStore, v -> {
+      Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show();
+      startActivity(new Intent(this, NormalDetailActivity.class));
+    });
 
     binding.recyclerList.setAdapter(adapter);
   }

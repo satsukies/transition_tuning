@@ -20,7 +20,8 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".normal.NormalMasterActivity"></activity>
+    <activity android:name=".normal.NormalMasterActivity" />
+    <activity android:name=".normal.NormalDetailActivity" />
   </application>
 
 </manifest>
