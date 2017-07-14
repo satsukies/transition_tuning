@@ -83,9 +83,6 @@ public class AdvancedRecyclerAdapter extends RecyclerView.Adapter<AdvancedRecycl
         .load(Values.URL_IMAGE_LOW)
         .into(imageView);
     imageView.setTransitionName("image");
-    //veryhigh;http://imgur.com/a/HGM2k direct;http://imgur.com/K1oWDXu.png
-    //mid;http://imgur.com/a/XrGjF direct;http://imgur.com/QUKsCnM
-    //low;http://imgur.com/a/NG6i4 direct;http://imgur.com/ZJNbigT
   }
 
   @Override public int getItemCount() {
