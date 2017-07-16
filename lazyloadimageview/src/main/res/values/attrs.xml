@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="LazyLoadImageView">
+    <attr name="src_thumbnail" format="string" />
+    <attr name="src_target" format="string" />
+    <attr name="disable_memory_cache" format="boolean" />
+    <attr name="disable_disk_cache" format="boolean" />
+    <attr name="dont_animate" format="boolean" />
+    <attr name="dont_transform" format="boolean" />
+    <attr name="auto_load" format="boolean" />
+    <attr name="auto_load_thumbnail" format="boolean" />
+    <attr name="auto_load_target" format="boolean" />
+  </declare-styleable>
+</resources>
