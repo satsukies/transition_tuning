@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import net.ddns.satsukies.transition_tuning.R;
@@ -38,8 +37,6 @@ public class AdvancedDetailActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    getWindow().setSharedElementsUseOverlay(true);
-
     binding = DataBindingUtil.setContentView(this, R.layout.activity_advanced_detail);
 
     ImageView imageView = binding.headerImage;
@@ -47,6 +44,7 @@ public class AdvancedDetailActivity extends AppCompatActivity {
     StethoGlide.with(imageView.getContext())
         .load(Values.URL_IMAGE_VERYVERY_HIGH_V2)
         .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE))
+        //すでにMasterActivityで取得済みであろう画像をサムネイルとして利用する
         .thumbnail(StethoGlide.with(imageView.getContext())
             .load(Values.URL_IMAGE_LOW)
             .apply(new RequestOptions().skipMemoryCache(true)

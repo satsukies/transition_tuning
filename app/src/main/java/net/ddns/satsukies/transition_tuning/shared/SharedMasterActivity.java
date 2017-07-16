@@ -38,8 +38,6 @@ public class SharedMasterActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    getWindow().setSharedElementsUseOverlay(true);
-
     binding = DataBindingUtil.setContentView(this, R.layout.activity_shared_master);
     masterStore = new SharedMasterStore(Dispatcher.getInstance());
 

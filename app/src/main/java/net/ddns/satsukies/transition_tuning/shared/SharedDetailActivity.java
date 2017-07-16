@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import net.ddns.satsukies.transition_tuning.R;
@@ -37,8 +36,6 @@ public class SharedDetailActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
-    getWindow().setSharedElementsUseOverlay(true);
 
     binding = DataBindingUtil.setContentView(this, R.layout.activity_shared_detail);
 
