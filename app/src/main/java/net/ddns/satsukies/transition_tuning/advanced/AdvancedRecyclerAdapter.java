@@ -1,6 +1,7 @@
 package net.ddns.satsukies.transition_tuning.advanced;
 
 import android.databinding.DataBindingUtil;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -83,7 +84,7 @@ public class AdvancedRecyclerAdapter extends RecyclerView.Adapter<AdvancedRecycl
     StethoGlide.with(imageView.getContext())
         .load(Values.URL_IMAGE_LOW)
         .into(imageView);
-    imageView.setTransitionName("image");
+    ViewCompat.setTransitionName(imageView, "image");
   }
 
   @Override public int getItemCount() {

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -45,7 +46,7 @@ public class SharedMasterActivity extends AppCompatActivity {
       Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show();
 
       if (v.getTransitionName() == null) {
-        v.setTransitionName("image");
+        ViewCompat.setTransitionName(v, "image");
       }
 
       ActivityOptionsCompat optionsCompat =

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import net.ddns.satsukies.transition_tuning.Dispatcher;
@@ -45,7 +46,7 @@ public class AdvancedMasterActivity extends AppCompatActivity {
       Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show();
 
       if (v.getTransitionName() == null) {
-        v.setTransitionName("image");
+        ViewCompat.setTransitionName(v, "image");
       }
 
       ActivityOptionsCompat optionsCompat =

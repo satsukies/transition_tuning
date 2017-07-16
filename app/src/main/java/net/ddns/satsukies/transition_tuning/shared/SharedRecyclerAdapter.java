@@ -1,6 +1,7 @@
 package net.ddns.satsukies.transition_tuning.shared;
 
 import android.databinding.DataBindingUtil;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -82,7 +83,7 @@ public class SharedRecyclerAdapter
 
     ImageView imageView = holder.getBinding().contentImage;
     StethoGlide.with(imageView.getContext()).load(Values.URL_IMAGE_LOW).into(imageView);
-    imageView.setTransitionName("image");
+    ViewCompat.setTransitionName(imageView, "image");
   }
 
   @Override public int getItemCount() {

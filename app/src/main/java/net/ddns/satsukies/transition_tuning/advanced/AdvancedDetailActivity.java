@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -40,7 +41,7 @@ public class AdvancedDetailActivity extends AppCompatActivity {
     binding = DataBindingUtil.setContentView(this, R.layout.activity_advanced_detail);
 
     ImageView imageView = binding.headerImage;
-    imageView.setTransitionName("image");
+    ViewCompat.setTransitionName(imageView, "image");
     StethoGlide.with(imageView.getContext())
         .load(Values.URL_IMAGE_VERYVERY_HIGH_V2)
         .apply(new RequestOptions().skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE))
