@@ -42,7 +42,7 @@ public class NormalMasterActivity extends AppCompatActivity {
 
     adapter = new NormalMasterAdapter(this, masterStore, v -> {
       Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show();
-      startActivity(new Intent(this, NormalDetailActivity.class));
+      NormalDetailActivity.startActivity(this);
     });
 
     binding.recyclerList.setAdapter(adapter);

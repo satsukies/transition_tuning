@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   package="net.ddns.satsukies.transition_tuning"
   >
 
@@ -12,7 +13,13 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
+    android:name=".MyApplication"
     >
+    <meta-data
+      android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+      tools:node="remove"
+      />
+
     <activity android:name=".MenuActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
