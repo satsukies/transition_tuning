@@ -39,5 +39,16 @@
       android:text="Advanced"
       />
 
+    <net.ddns.satsukies.lazyloadimageview.LazyLoadImageView
+      android:id="@+id/image"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_below="@id/button_advanced"
+      android:layout_centerHorizontal="true"
+      app:auto_load="false"
+      app:src_target="http://imgur.com/OGd7LqE.png"
+      app:src_thumbnail="http://imgur.com/ZJNbigT.png"
+      />
+
   </RelativeLayout>
 </layout>
