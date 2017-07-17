@@ -35,7 +35,7 @@ public class AdvancedRecyclerAdapter extends RecyclerView.Adapter<AdvancedRecycl
     Listener listener;
 
     public interface Listener {
-      void onClickItem(View v);
+      void onClickItem(View v, String url);
     }
 
     public MyViewHolder(View itemView) {
@@ -77,7 +77,7 @@ public class AdvancedRecyclerAdapter extends RecyclerView.Adapter<AdvancedRecycl
       Toast.makeText(context, "toast:" + parentPosition + "-" + position, Toast.LENGTH_SHORT)
           .show();
 
-      listener.onClickItem(holder.binding.contentImage);
+      listener.onClickItem(holder.binding.contentImage, Values.URL_IMAGE_LOW);
     });
 
     ImageView imageView = holder.getBinding().contentImage;

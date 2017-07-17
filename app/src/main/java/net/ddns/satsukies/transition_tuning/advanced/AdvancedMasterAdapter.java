@@ -27,7 +27,7 @@ public class AdvancedMasterAdapter extends ArrayAdapter<String> {
   private static final int LAYOUT_LIST = R.layout.layout_horizontal_list;
 
   public interface OnClickListener {
-    void onClickItem(View v);
+    void onClickItem(View v, String url);
   }
 
   public AdvancedMasterAdapter(@NonNull AppCompatActivity activity, AdvancedMasterStore store,
@@ -56,7 +56,7 @@ public class AdvancedMasterAdapter extends ArrayAdapter<String> {
     manager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
     adapter = new AdvancedRecyclerAdapter(activity, position, masterStore.getDataList(),
-        v -> onClickListener.onClickItem(v));
+        (v, url) -> onClickListener.onClickItem(v, url));
 
     binding.contentList.setAdapter(adapter);
     binding.contentList.setLayoutManager(manager);

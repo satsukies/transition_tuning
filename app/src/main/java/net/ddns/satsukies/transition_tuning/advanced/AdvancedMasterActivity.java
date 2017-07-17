@@ -42,7 +42,7 @@ public class AdvancedMasterActivity extends AppCompatActivity {
     binding = DataBindingUtil.setContentView(this, R.layout.activity_advanced_master);
     masterStore = new AdvancedMasterStore(Dispatcher.getInstance());
 
-    adapter = new AdvancedMasterAdapter(this, masterStore, v -> {
+    adapter = new AdvancedMasterAdapter(this, masterStore, (v, url) -> {
       Toast.makeText(this, "pressed", Toast.LENGTH_SHORT).show();
 
       if (v.getTransitionName() == null) {
@@ -52,7 +52,7 @@ public class AdvancedMasterActivity extends AppCompatActivity {
       ActivityOptionsCompat optionsCompat =
           ActivityOptionsCompat.makeSceneTransitionAnimation(this, v, v.getTransitionName());
 
-      AdvancedDetailActivity.startActivityWithTransition(this, optionsCompat);
+      AdvancedDetailActivity.startActivityWithTransition(this, optionsCompat, url);
     });
 
     binding.recyclerList.setAdapter(adapter);
